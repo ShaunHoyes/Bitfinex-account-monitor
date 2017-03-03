@@ -30,6 +30,7 @@ function wallet() {
     body: payload
   };
 
+
   baseRequest.post(options, function(error, response, body) {
     let data = JSON.parse(body);
     let exchangeUSD = data[3]['amount'];
@@ -49,14 +50,12 @@ function wallet() {
       request.get(url + "/pubticker/btcusd", function(error, response, body) {
         let data = JSON.parse(body);
         let calculation = (parseFloat(data.last_price) * parseFloat(btc)) + parseFloat(usd);
-        // console.log(colors.cyan("     Total: " + "$" + calculation.toFixed(2) + " USD"));
-        console.log(colors.cyan(`Total: $${calculation.toFixed(2)} USD`))
-
+        console.log(colors.cyan(`Total: $${calculation.toFixed(2)} USD`));
       })
     });
 
-    console.log("\nBitfinex Funding Balance:");
-    console.log(colors.green("USD wallet: $" + totalUSD.toFixed(2) + " USD"));
+    console.log(`\nBitfinex Funding Balance:`);
+    console.log(colors.green(`USD wallet: $${totalUSD.toFixed(2)} USD`));
     balance(totalBTC.toFixed(8));
     setTimeout(function() {
       totalBalance(totalBTC, totalUSD);}, 1000)
@@ -94,20 +93,20 @@ function thirtyDayReturn() {
         request.get(url + "/pubticker/btcusd", function(error, resopnse, body) {
           let data = JSON.parse(body);
           let calculation = parseFloat(data.last_price) * parseFloat(amount);
-          console.log(colors.yellow("BTC: " + "  $" + calculation.toFixed(2) + " USD " + "(" + btc30day.toFixed(8) + " BTC" + ")"));
+          console.log(colors.yellow(`BTC: $${calculation.toFixed(2)} USD (${btc30day.toFixed(8)} BTC)`));
         });
       });
       let totalReturn = (function (btc, usd) {
         request.get(url + "/pubticker/btcusd", function(error, response, body) {
           let data = JSON.parse(body);
           let calculation = (parseFloat(data.last_price) * parseFloat(btc)) + parseFloat(usd);
-          console.log(colors.cyan("Total: " + "$" + calculation.toFixed(2) + " USD"));
+          console.log(colors.cyan(`Total 30-day Return: $${calculation.toFixed(2)} USD`));
         })
       });
 
-      console.log(colors.green.underline("\nBitfinex Snapshot"));
-      console.log("\nMargin Funding Total Return (30 days):");
-      console.log(colors.green("USD: " + "  $" + (data.funding_profit_30d[0]['amount']).toFixed(2) + " USD"));
+      console.log(colors.green.underline(`Bitfinex Snapshot`));
+      console.log(`\nMargin Funding Total Return (30 days):`);
+      console.log(colors.green(`USD: $${data.funding_profit_30d[0]['amount'].toFixed(2)} USD`));
       conversion(data.funding_profit_30d[1]['amount']);
       setTimeout(function() {
             totalReturn(data.funding_profit_30d[1]['amount'], data.funding_profit_30d[0]['amount']);}, 500)
@@ -139,7 +138,7 @@ function activeCredits() {
   };
   baseRequest.post(options, function(error, response, body) {
       let data = JSON.parse(body);
-      console.log(colors.green(data.length + " active credits"));
+      console.log(colors.green(`${data.length} active credits`));
   });
 };
 
