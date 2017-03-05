@@ -8,7 +8,7 @@ Through this monitor, users can:
 * detailed information on active loans (i.e. currency, amount, rate, expiration date)
 * 30-day return on lending activities (USD and BTC)
 
-You will need generate and retrieve an api key and a secret api key from you Bitfinex account.
+You will need generate and retrieve an api key and a secret api key from your Bitfinex account.
 
 
 Api documentation for Bitfinex can be found at http://docs.bitfinex.com/docs.
