@@ -1,7 +1,7 @@
 // displays all active provided loans
 const
-  colors = require('colors');
-  crypto = require('crypto');
+  colors = require('colors'),
+  crypto = require('crypto'),
   request = require('request'),
   api_key = <api_key>,
   api_secret = <api_secret>,

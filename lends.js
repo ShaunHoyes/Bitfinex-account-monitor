@@ -1,6 +1,6 @@
 const
-  request = require('request')
-  url = `https://api.bitfinex.com/v1`
+  request = require('request'),
+  url = `https://api.bitfinex.com/v1`,
   payload = {
   "timestamp": false,
   "limit_lends": 1
@@ -11,7 +11,7 @@ const
   };
 
 request.get(options, function(error, response, body) {
-    var data = JSON.parse(body);
+    let data = JSON.parse(body);
     console.log(`Bitfinex lending stats:\n`)
     console.log(`Interest rate: ${data[0]['rate']}%`);
     console.log(`Lent: ${data[0]['amount_lent']} USD`);
