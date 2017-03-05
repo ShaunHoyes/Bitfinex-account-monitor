@@ -1,6 +1,5 @@
 // shows the available funds (profit) in your account from margin lending activities
-const 
-  colors = require('colors'),
+const
   request = require('request'),
   crypto = require('crypto'),
   api_key = <api_key>,
@@ -31,7 +30,12 @@ let options = {
 baseRequest.post(options, function(error, response, body) {
   let data = JSON.parse(body);
   let satoshi = parseFloat(data[0]['available']);
-  console.log(`Bitfinex Funds Available for Use:`);
-  console.log(colors.green(`USD: $${data[1]['available']}`));
-  console.log(colors.yellow(`BTC: ${satoshi * 100000000} satoshi`))
+  console.log(`Bitfinex Funds Available for Use:\n`);
+  for (let i = 0; i < data.length; i += 1) {
+    if (data[i]['amount'] != 0) {
+      console.log(`${data[i]['currency']} ${data[i]['type']} account:`);
+      console.log(`amount: ${data[i]['amount']} ${data[i]['currency']}`);
+      console.log(`available: ${data[i]['available']} ${data[i]['currency']}\n`);
+    }
+  }
 });
