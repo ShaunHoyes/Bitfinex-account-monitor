@@ -1,6 +1,6 @@
 // generates a new bitcoin address for deposit into your Deposit wallet
-const crypto = require('crypto');
 const
+	crypto = require('crypto');
   request = require('request'),
   api_key = <api_key>,
   api_secret = <api_secret>,
