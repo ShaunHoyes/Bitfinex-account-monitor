@@ -1,6 +1,8 @@
+"use strict";
+
 // generates a new bitcoin address for deposit into your Exchange wallet
 const
-  crypto = require('crypto');
+  crypto = require('crypto'),
 	request = require('request'),
   api_key = <api_key>,
   api_secret = <api_secret>,

@@ -1,3 +1,5 @@
+"use strict";
+
 // Gives price/trade info (i.e. bids, asks, volume, etc.)
 const request = require('request');
 const bitfinexUrl = `https://api.bitfinex.com/v1`;

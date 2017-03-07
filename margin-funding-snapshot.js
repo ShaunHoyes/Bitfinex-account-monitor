@@ -1,3 +1,5 @@
+"use strict";
+
 // provides a snapshot of margin lending account
 const
     api_key = <api_key>,
@@ -29,7 +31,6 @@ function wallet() {
     },
     body: payload
   };
-
 
   baseRequest.post(options, function(error, response, body) {
     let data = JSON.parse(body);
@@ -85,7 +86,8 @@ function thirtyDayReturn() {
     },
     body: payload
   };
-  baseRequest.post(options, function(error, response, body) {
+  
+	baseRequest.post(options, function(error, response, body) {
       let data = JSON.parse(body);
       let btc30day = (data.funding_profit_30d[1]['amount']);
 
@@ -136,7 +138,8 @@ function activeCredits() {
     },
     body: payload
   };
-  baseRequest.post(options, function(error, response, body) {
+  
+	baseRequest.post(options, function(error, response, body) {
       let data = JSON.parse(body);
       console.log(colors.green(`${data.length} active credits`));
   });

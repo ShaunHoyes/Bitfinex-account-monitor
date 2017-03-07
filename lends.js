@@ -1,3 +1,5 @@
+"use strict";
+
 const
   request = require('request'),
   url = `https://api.bitfinex.com/v1`,

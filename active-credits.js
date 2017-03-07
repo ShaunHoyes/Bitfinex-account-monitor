@@ -1,3 +1,5 @@
+"use strict";
+
 // displays all active provided loans
 const
   colors = require('colors'),

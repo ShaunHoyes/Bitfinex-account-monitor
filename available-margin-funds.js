@@ -1,3 +1,5 @@
+"use strict";
+
 // shows the available funds (profit) in your account from margin lending activities
 const
   request = require('request'),
@@ -11,7 +13,6 @@ const
     baseUrl: `https://api.bitfinex.com/v1`
   });
 
-// request
 let payload = {
   "request": `/v1/balances`,
   "nonce": Date.now().toString()

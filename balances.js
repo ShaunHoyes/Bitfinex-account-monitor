@@ -1,3 +1,5 @@
+"use strict";
+
 const
   request = require('request'),
   crypto = require('crypto'),
