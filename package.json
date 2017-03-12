@@ -1,0 +1,28 @@
+{
+  "name": "bitfinex-account-monitor",
+  "version": "0.0.1",
+  "description": "allows Bitfinex account holders to monitor account activity throughout the Bitfinex platform",
+  "main": "balances.js",
+  "scripts": {
+    "test": "\"echo \\\"Error: no test specified\\\" && exit 1\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ShaunHoyes/Bitfinex-account-monitor.git"
+  },
+  "keywords": [
+    "bitcoin",
+    "bitfinex",
+    "exchange",
+    "trading",
+    "investment-management",
+    "portfolio-management",
+    "cryptocurrency"
+  ],
+  "author": "John Shaun Hoyes II",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ShaunHoyes/Bitfinex-account-monitor/issues"
+  },
+  "homepage": "https://github.com/ShaunHoyes/Bitfinex-account-monitor#readme"
+}
