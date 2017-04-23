@@ -2,7 +2,7 @@
   "name": "bitfinex-account-monitor",
   "version": "0.0.1",
   "description": "allows Bitfinex account holders to monitor account activity throughout the Bitfinex platform",
-  "main": "balances.js",
+  "main": "available-funds.js",
   "scripts": {
     "test": "\"echo \\\"Error: no test specified\\\" && exit 1\""
   },
